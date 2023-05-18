@@ -1,4 +1,5 @@
 import selfie from "../marian.jpeg";
+import logo from "../SportiLand-COLOR.png";
 import MainMenu from "../menu/MainMenu";
 
 export default function AppHeader() {
@@ -20,7 +21,7 @@ export default function AppHeader() {
         </div>
         <div>
           <a target="_blank" href="https://www.facebook.com/sportiland">
-            <img id="sportiland" src="SportiLand-COLOR.png" alt="sportiland" height="85px" className="link" />
+            <img id="sportiland" src={logo} alt="sportiland" height="85px" className="link" />
           </a>
         </div>
       </div>
