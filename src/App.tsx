@@ -168,11 +168,12 @@ function AppFooter() {
 
 function App() {
   return (
-    <div>
+    //Tag empty - React.Fragment
+    <>
       <AppHeader />
       <ContentWrapper />
       <AppFooter />
-    </div>
+    </>
   );
 }
 
