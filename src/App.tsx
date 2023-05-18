@@ -2,6 +2,8 @@ import React from "react";
 import logo from "./logo.svg";
 import selfie from "./marian.jpeg";
 import "./App.css";
+import MainMenu from "./menu/MainMenu";
+import { AppFooter } from "./footer/components";
 
 function AppHeader() {
   return (
@@ -28,38 +30,6 @@ function AppHeader() {
       </div>
       <MainMenu />
     </header>
-  );
-}
-
-function MainMenu() {
-  return (
-    <ul id="top-menu-bar">
-      <li>
-        <a href="#" data-page="home">
-          HOME
-        </a>
-      </li>
-      <li>
-        <a href="#" data-page="skills">
-          Skills
-        </a>
-      </li>
-      <li>
-        <a href="#" data-page="languages">
-          Know Languages
-        </a>
-      </li>
-      <li>
-        <a href="#" data-page="projects">
-          Projects
-        </a>
-      </li>
-      <li>
-        <a href="#" data-page="rubik">
-          ◊Rubik
-        </a>
-      </li>
-    </ul>
   );
 }
 
@@ -170,22 +140,6 @@ function RubikCube() {
       <div className="square3-2"></div>
       <div className="square3-3"></div>
     </section>
-  );
-}
-
-function AppFooter() {
-  return (
-    <footer className="footer-photo">
-      <a target="_blank" href="https://www.google.com">
-        <img height="65" src="google.png" />
-      </a>
-      <a target="_blank" href="https://www.facebook.com/sportiland">
-        <img height="65" src="SportiLand-COLOR.png" />
-      </a>
-      <a target="_blank" href="https://www.linkedin.com/in/marianerema">
-        <img height="65" src="linkedin.png" />
-      </a>
-    </footer>
   );
 }
 
