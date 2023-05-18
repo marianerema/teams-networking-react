@@ -66,39 +66,7 @@ function MainMenu() {
 function ContentWrapper() {
   return (
     <section id="content">
-      <div id="side-menu">
-        <section>
-          <h2>Contact</h2>
-          <form action="">
-            <div>
-              <label htmlFor="subscriberEmail">Email:</label>
-              <input type="email" required name="email" id="subscriberEmail" placeholder="your@email.com" />
-            </div>
-            <div>
-              <label htmlFor="subscriber">Name:</label>
-              <input type="text" required name="nume" id="subscriber" placeholder="Full name" />
-            </div>
-            <button type="submit">Subscribe</button>
-          </form>
-        </section>
-
-        {/* <!--Menu 2--> */}
-        <section>
-          <h3>Rubik</h3>
-          <div className="square1-1"></div>
-          <div className="square1-2"></div>
-          <div className="square1-3"></div>
-          <div className="square2-0"></div>
-          <div className="square2-1"></div>
-          <div className="square2-2"></div>
-          <div className="square2-3"></div>
-          <div className="square3-0"></div>
-          <div className="square3-1"></div>
-          <div className="square3-2"></div>
-          <div className="square3-3"></div>
-        </section>
-      </div>
-
+      <SideMenu />
       <div id="main">
         {/* <!--HOME--> */}
         <div id="home" className="page">
@@ -112,30 +80,14 @@ function ContentWrapper() {
           <ul id="skills-list"></ul>
         </div>
 
-        <div>...</div>
+        <div>
+          <h2>Teams</h2>
+        </div>
 
         {/* <!--LANGUAGES--> */}
         <div id="languages" className="page">
           <h2>Known Languages</h2>
-
-          <table border={1}>
-            <thead>
-              <tr>
-                <th>Languages</th>
-                <th>Level</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Romanian</td>
-                <td>Native</td>
-              </tr>
-              <tr>
-                <td>English</td>
-                <td>B1</td>
-              </tr>
-            </tbody>
-          </table>
+          <KnowLanguagesTable />
         </div>
 
         {/* <!--PROJECTS--> */}
@@ -151,6 +103,72 @@ function ContentWrapper() {
           <h2>Rubik</h2>
         </div>
       </div>
+    </section>
+  );
+}
+
+function KnowLanguagesTable() {
+  return (
+    <table border={1}>
+      <thead>
+        <tr>
+          <th>Languages</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Romanian</td>
+          <td>Native</td>
+        </tr>
+        <tr>
+          <td>English</td>
+          <td>B1</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
+
+function SideMenu() {
+  return (
+    <div id="side-menu">
+      <section>
+        <h2>Contact</h2>
+        <form action="">
+          <div>
+            <label htmlFor="subscriberEmail">Email:</label>
+            <input type="email" required name="email" id="subscriberEmail" placeholder="your@email.com" />
+          </div>
+          <div>
+            <label htmlFor="subscriber">Name:</label>
+            <input type="text" required name="nume" id="subscriber" placeholder="Full name" />
+          </div>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      {/* <!--Menu 2--> */}
+      <RubikCube />
+    </div>
+  );
+}
+
+function RubikCube() {
+  return (
+    <section>
+      <h3>Rubik</h3>
+      <div className="square1-1"></div>
+      <div className="square1-2"></div>
+      <div className="square1-3"></div>
+      <div className="square2-0"></div>
+      <div className="square2-1"></div>
+      <div className="square2-2"></div>
+      <div className="square2-3"></div>
+      <div className="square3-0"></div>
+      <div className="square3-1"></div>
+      <div className="square3-2"></div>
+      <div className="square3-3"></div>
     </section>
   );
 }
