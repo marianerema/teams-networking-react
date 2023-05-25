@@ -1,4 +1,5 @@
 import { SideMenu } from "../menu/SideMenu";
+import { TeamsTable } from "../teams/TeamsTable";
 import { KnowLanguagesTable } from "./KnowLanguagesTable";
 
 export function ContentWrapper() {
@@ -18,8 +19,13 @@ export function ContentWrapper() {
           <ul id="skills-list"></ul>
         </div>
 
-        <div>
+        {/* <!--Teams--> */}
+        <div className="page" style={{ display: "block" }}>
           <h2>Teams</h2>
+          <div>
+            <input type="search" name="search" id="search" placeholder="Search" />
+          </div>
+          <TeamsTable />
         </div>
 
         {/* <!--LANGUAGES--> */}
