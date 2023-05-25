@@ -25,7 +25,7 @@ export default function AppHeader() {
           </a>
         </div>
       </div>
-      <MainMenu />
+      <MainMenu active="home" />
     </header>
   );
 }

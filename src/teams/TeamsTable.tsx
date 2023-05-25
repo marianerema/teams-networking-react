@@ -109,5 +109,5 @@ export function TeamsTableWrapper() {
     }
   ];
 
-  return <TeamsTable teams={teams} loading={true} />;
+  return <TeamsTable teams={teams} loading={false} />;
 }
