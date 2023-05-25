@@ -1,11 +1,12 @@
 import selfie from "../marian.jpeg";
 import logo from "../SportiLand-COLOR.png";
 import MainMenu from "../menu/MainMenu";
+import { useState } from "react";
 
 export default function AppHeader() {
-  let active = "teams";
+  const [active, setActive] = useState("teams");
 
-  console.warn("render AppHeader");
+  //console.warn("render AppHeader", active);
 
   return (
     <header>
@@ -33,7 +34,7 @@ export default function AppHeader() {
         active={active}
         setActive={page => {
           console.warn("active", page);
-          active = page;
+          setActive(page);
         }}
       />
     </header>
