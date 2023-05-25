@@ -1,5 +1,5 @@
 import { SideMenu } from "../menu/SideMenu";
-import { TeamsTable } from "../teams/TeamsTable";
+import { TeamsTableWrapper } from "../teams/TeamsTable";
 import { KnowLanguagesTable } from "./KnowLanguagesTable";
 
 export function ContentWrapper() {
@@ -25,7 +25,7 @@ export function ContentWrapper() {
           <div>
             <input type="search" name="search" id="search" placeholder="Search" />
           </div>
-          <TeamsTable />
+          <TeamsTableWrapper />
         </div>
 
         {/* <!--LANGUAGES--> */}

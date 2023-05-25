@@ -1,46 +1,9 @@
 import "./style.css";
 
-export function TeamsTable() {
-  const teams = [
-    {
-      id: "ezabnf1630345987541",
-      promotion: "css",
-      members: "Nicolae",
-      name: "Names",
-      url: "https://github.com/nmatei/nmatei.github.io"
-    },
-    {
-      id: "86mq81630347385708",
-      promotion: "js",
-      members: "Matei, Andrei",
-      name: "JS/HTML/CSS Quiz",
-      url: "https://github.com/nmatei/simple-quiz-app"
-    },
-    {
-      id: "w2aal1630347411901",
-      promotion: "js",
-      members: "FastTrackIT Students, Nicolae",
-      name: "Teams Networking",
-      url: "https://github.com/nmatei/teams-networking"
-    },
-    {
-      id: "w2aal1630347411902",
-      promotion: "react",
-      members: "FastTrackIT Students, ",
-      name: " Networking React",
-      url: "https://github.com/nmatei/teams-networking-react"
-    },
-    {
-      id: "ado0l71678386125092",
-      promotion: "abccc",
-      members: "defff",
-      name: "ghiii",
-      url: "jklm"
-    }
-  ];
-
+export function TeamsTable(props) {
+  console.warn("props", props);
   return (
-    <form id="editForm" action="" method="POST">
+    <form id="editForm" action="" method="POST" className={props.loading ? "loading-mask" : ""}>
       <table id="teams">
         <thead>
           <tr>
@@ -53,7 +16,7 @@ export function TeamsTable() {
         </thead>
 
         <tbody>
-          {teams.map(({ promotion, members, name, url, id }) => (
+          {props.teams.map(({ promotion, members, name, url, id }) => (
             <tr key={id}>
               <td>{promotion}</td>
               <td>{members}</td>
@@ -105,4 +68,46 @@ export function TeamsTable() {
       </table>
     </form>
   );
+}
+
+export function TeamsTableWrapper() {
+  const teams = [
+    {
+      id: "ezabnf1630345987541",
+      promotion: "css",
+      members: "Nicolae",
+      name: "Names",
+      url: "https://github.com/nmatei/nmatei.github.io"
+    },
+    {
+      id: "86mq81630347385708",
+      promotion: "js",
+      members: "Matei, Andrei",
+      name: "JS/HTML/CSS Quiz",
+      url: "https://github.com/nmatei/simple-quiz-app"
+    },
+    {
+      id: "w2aal1630347411901",
+      promotion: "js",
+      members: "FastTrackIT Students, Nicolae",
+      name: "Teams Networking",
+      url: "https://github.com/nmatei/teams-networking"
+    },
+    {
+      id: "w2aal1630347411902",
+      promotion: "react",
+      members: "FastTrackIT Students, ",
+      name: " Networking React",
+      url: "https://github.com/nmatei/teams-networking-react"
+    },
+    {
+      id: "ado0l71678386125092",
+      promotion: "abccc",
+      members: "defff",
+      name: "ghiii",
+      url: "jklm"
+    }
+  ];
+
+  return <TeamsTable teams={teams} loading={true} />;
 }
