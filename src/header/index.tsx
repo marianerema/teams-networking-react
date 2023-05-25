@@ -3,6 +3,10 @@ import logo from "../SportiLand-COLOR.png";
 import MainMenu from "../menu/MainMenu";
 
 export default function AppHeader() {
+  let active = "teams";
+
+  console.warn("render AppHeader");
+
   return (
     <header>
       <div id="header-wrapper">
@@ -25,7 +29,13 @@ export default function AppHeader() {
           </a>
         </div>
       </div>
-      <MainMenu active="home" />
+      <MainMenu
+        active={active}
+        setActive={page => {
+          console.warn("active", page);
+          active = page;
+        }}
+      />
     </header>
   );
 }
